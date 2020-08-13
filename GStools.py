@@ -262,7 +262,7 @@ def gsnew(bot, addAbrev, addAPI, addCat): # permit users to add other projects t
 		check = None
 	
 	if check is not None:
-		bot.say("I already know that wiki. If override is needed, contact Operator873")
+		bot.say("I already know that wiki. If override is needed, contact the bot owner")
 		return
 
 	else:
@@ -351,19 +351,19 @@ def gsirc(bot, trigger):
 	else:
 		bot.say("I'm sorry! You're not authorized to perform this action.")
 
-@module.require_owner(message="This function is only available to Operator873")
+@module.require_owner(message="This function is only available to the bot owner")
 @module.commands('idwiki')
 def gsid(bot, trigger):
 	getWiki(bot, trigger.group(3))
 
-@module.require_owner(message="This function is only available to Operator873")
+@module.require_owner(message="This function is only available to the bot owner")
 @module.commands('csrf')
 def gscsrf(bot, trigger):
 	gslogin()
 	csrf = getdb("csrf_token", "config", "bot_name", "GlobalSySBot")[0]
 	bot.say(csrf)
 
-@module.require_owner(message="This function is only available to Operator873")
+@module.require_owner(message="This function is only available to the bot owner")
 @module.commands('rewrite')
 def gsrewrite(bot, trigger):
 	addWiki = trigger.group(2)
@@ -386,7 +386,7 @@ def randomwiki(bot, trigger):
 	rng = random.randint(0,limit)
 	bot.say("Random wiki: " + str(list[rng][0]))
 
-@module.require_owner(message="This function is only available to Operator873")
+@module.require_owner(message="This function is only available to the bot owner")
 @module.commands('authnick')
 def authnick(bot, trigger):
 	db = sqlite3.connect("/home/ubuntu/.sopel/modules/wiki2.db")
@@ -401,7 +401,7 @@ def authnick(bot, trigger):
 	else:
 		bot.say("I already know " + trigger.group(3) + " as " + check)
 
-@module.require_owner(message="This function is only available to Operator873")
+@module.require_owner(message="This function is only available to the bot owner")
 @module.commands('idnick')
 def idnick(bot, trigger):
 	if isGS(trigger.group(3)) is False:
@@ -409,7 +409,7 @@ def idnick(bot, trigger):
 	else:
 		bot.say("I know " + trigger.group(3) + " as " + isGS(trigger.group(3)))
 
-@module.require_owner(message="This function is only available to Operator873")
+@module.require_owner(message="This function is only available to the bot owner")
 @module.commands('rmvnick')
 def rmvnick(bot, trigger):
 	db = sqlite3.connect("/home/ubuntu/.sopel/modules/wiki2.db")
@@ -463,7 +463,7 @@ def getNewpages(bot, trigger):
 		DATA = XMIT(apiurl, getProj, "get")
 		server = DATA['query']['general']['servername']
 	except Exception as e:
-		bot.say("Ugh... something broke. Help me Operator873! (" + str(e) + ")")
+		bot.say("Ugh... something broke. Help me the bot owner! (" + str(e) + ")")
 		return
 	
 	
