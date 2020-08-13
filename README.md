@@ -14,7 +14,7 @@ The bot functions to assist Global sysops in checking the Category for speedy de
 
 # Dependencies
 
-This module requires Python3.x and libraries: json, requests, time, random, sqlite3, urlparse, and OAuth1. Additionally, this module depends on a sqlite database which is not yet included in this repo. A future update will introduce an example database file.
+This module requires Python3.x and libraries: json, requests, time, random, sqlite3, urlparse, and OAuth1.
 
 # WYSIWYG
 
