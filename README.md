@@ -8,7 +8,9 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/Operator873/GStools)
 
 
-This is a Sopel IRC Bot module which supports Wikimedia Global Sysops.
+This was a Sopel IRC Bot module which supports Wikimedia Global Sysops.
+
+This plugin is now deprecated and unmaintained. Please see https://github.com/Operator873/CabalBot for the most recent interation.
 
 The bot functions to assist Global sysops in checking the Category for speedy deletions across any and all Wiki?edia projects. The bot can report those articles found in the categories to an IRC channel or on their talk page at meta.wikimedia.org.
 
